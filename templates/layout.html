@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='password.css')}}" />
+
+</head>
+<body>
+
+<div class="navbar">
+    <label class="logo">passGenerator</label>
+    <ul>
+            <li><a class="active" href="{{ url_for('home') }}" class="navbar-brand">Home</a></li>
+            <li><a href="{{ url_for('enternew') }}" class="navbar-item">Add Password</a></li>
+
+        </ul>
+
+
+        </div>
+
+        <div class="body-content">
+            {% block content %}
+            {% endblock %}
+            <br>
+            <br>
+            <hr/>
+            <br>
+            <br>
+            <footer class="pass-lay">
+                <p><img src="{{ url_for('static', filename='passwordlock.png')}}" width="75" height="90">&copy; 2023</p>
+            </footer>
+        </div>
+
+</body>
+</html>

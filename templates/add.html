@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='password.css')}}" />
+</head>
+<body>
+
+{% extends "layout.html" %}
+{% block title %}
+Generate New Password
+{% endblock %}
+{% block content %}
+        <form class="pass-add" action="{{ url_for('addrec') }}" method="POST">
+            <label>Website Name</label>
+            <input type="text" name="nm" /><br>
+            <label type="text" name="password1" /><br>
+
+            <button type="submit">Generate</button>
+        </form>
+{% endblock %}
+
+
+</body>
+</html>
